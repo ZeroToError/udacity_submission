@@ -1,0 +1,21 @@
+﻿Group hierarchy,Region,Description,Service,Upfront,Monthly,First 12 months total,Currency,Configuration summary,,,,,,,,,,,
+My Estimate,US East (N. Virginia),,Amazon Virtual Private Cloud (VPC),0,77.85,934.2,USD,Number of NAT Gateways (1),,,,,,,,,,,
+My Estimate,US East (N. Virginia),udacity-hungnv127-estimate-cloudfront,Amazon CloudFront,0,2050,24600,USD,"Data transfer out to internet (10000 GB per month), Data transfer out to origin (10000 GB per month), Number of requests (HTTPS) (1000000000 per month)",,,,,,,,,,,
+My Estimate,US East (N. Virginia),udacity-hungnv127-estimate-s3,S3 Standard,0,5107.2,61286.4,USD,S3 Standard storage (200000 GB per month),,,,,,,,,,,
+My Estimate,US East (N. Virginia),udacity-hungnv127-estimate-s3,Data Transfer,0,0,0,USD,"DT Inbound: Not selected (0 TB per month), DT Outbound: Amazon CloudFront (0 TB per month)",,,,,,,,,,,
+My Estimate,US East (N. Virginia),udacity-hungnv127-estimate-ec2,Amazon EC2,0,2443.41,29320.92,USD,"Operating system (Linux), Quantity (16), Pricing strategy (Standard Reserved Instances 1 Year No Upfront), Storage amount (8 GB), Instance type (m5zn.xlarge)",,,,,,,,,,,
+My Estimate,US East (N. Virginia),udacity-hungnv127-estimate-rds,Amazon RDS for MySQL,0,6418.2,77018.4,USD,"Storage for each RDS instance (General Purpose SSD (gp2)), Storage amount (5000 GB), Quantity (4), Instance type (db.m1.large), Utilization (On-Demand only) (100 %Utilized/Month), Deployment option (Multi-AZ), Pricing strategy (OnDemand), Additional backup storage (5000 GB)",,,,,,,,,,,
+My Estimate,US East (N. Virginia),udacity-hungnv127-estimate-elb,Application Load Balancer,0,2352.43,28229.16,USD,Number of Application Load Balancers (1),,,,,,,,,,,
+My Estimate,US East (N. Virginia),udacity-hungnv127-estimate-elb,Network Load Balancer,0,71.18,854.16,USD,"Number of Network Load Balancers (1), Processed bytes per NLB for TCP (10 GB per hour), Average number of new TCP connections (10000 per second), Average TCP connection duration (1 seconds)",,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+Acknowledgement,,,,,,,,,,,,,,,,,,,
+"* AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services.",,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+SA Note,,,,,,,,,,,,,,,,,,,
+"* For budget addition, we can 
+- Let users upload more data (include post, media files,...) by expanding S3 and RDS capacity.
+- Create Standby database for RDS
+- Improve server performance by using high-performance EC2 type, and also create standby backup Server
+ ",,,,,,,,,,,,,,,,,,,

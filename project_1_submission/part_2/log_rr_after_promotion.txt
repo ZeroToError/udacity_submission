@@ -1,0 +1,29 @@
+[ec2-user@ip-10-2-10-163 ~]$ mysql -h ud-hungnv127-database-readreplica-1.crl7dbck5qcx.ap-southeast-2.rds.amazonaws.com -u admin -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MySQL connection id is 8
+Server version: 8.0.27 Source distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MySQL [(none)]> use udacity
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+MySQL [udacity]> INSERT INTO cities VALUES ("cty_000003", "HoChiMinh", 10000000);
+Query OK, 1 row affected (0.01 sec)
+
+MySQL [udacity]> SELECT * FROM cities;
++------------+-----------+------------+
+| id         | name      | population |
++------------+-----------+------------+
+| cty_000001 | Hanoi     |    5000000 |
+| cty_000002 | Danang    |    2000000 |
+| cty_000003 | HoChiMinh |   10000000 |
++------------+-----------+------------+
+3 rows in set (0.00 sec)
+
+MySQL [udacity]>
