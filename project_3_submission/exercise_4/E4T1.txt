@@ -1,0 +1,11 @@
+# Identify 2-3 changes that can be made to our environment to prevent an ssh brute force attack from the internet.
+1. Update SecurityGroup to restrict access to Instance (only open to specific IP, CIDR for port 22) or to remove inbound rule that allows traffic to port 22
+2. Associate the new NACL to the public subnet in the VPC to DENY any traffic to port 22.
+3. Disable SSH password login on the application server instance.
+
+
+
+# Neither instance should have had access to the secret recipes bucket, in the even that instance API credentials were compromised how could we have prevented access to sensitive data.
+1. We can enable Server-side encrypt on the secret recipes bucket, this would only allow
+2. Update IAM policy so that Instances can only Get from free recipe bucket.
+3. Create a VPC endpoint for Amazon S3 and Add a bucket policy that allows access from the VPC endpoint.

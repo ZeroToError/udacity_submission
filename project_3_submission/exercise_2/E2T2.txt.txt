@@ -1,0 +1,30 @@
+Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project.
+
+CIS AWS Foundations Benchmark v1.2.0
+1. Ensure no security groups allow ingress from 0.0.0.0/0 to port 22 regarding AttackInstanceSG and WebAppSG
+2. Ensure no security groups allow ingress from 0.0.0.0/0 to port 3389 regarding WebAppSG
+
+Noncompliant Rules
+1. securityhub-s3-bucket-server-side-encryption-enabled-3608c004
+2. securityhub-nacl-no-unrestricted-ssh-rdp-6bd0c100
+3. securityhub-encrypted-volumes-fd121e16
+
+Inspector
+1. Instance i-0c2f00150986d2ef5 is configured to support password authentication over SSH.
+
+
+Bonus - provide recommendations on how to remediate the vulnerabilities.
+
+CIS AWS Foundations Benchmark v1.2.0
+1. Add rules to restrict accesss to port 22, only allow from specific IP, CIDR blocks.
+2. Add rules to restrict accesss to port 3389, only allow from specific IP, CIDR blocks.
+
+
+Noncompliant Rules
+1. Enable server-side encryption on cand-c3-free-recipes and cand-c3-secret-recipes buckets
+2. The rule fails if a NACL inbound entry allows a source CIDR block of '0.0.0.0/0' or '::/0' for ports 22 or 3389 -> update to different CIDR block 0.0.0.0/0
+3. Encrypt EBS volumes with a KMS key.
+
+
+Inspector
+1. Disable password authentication over SSH

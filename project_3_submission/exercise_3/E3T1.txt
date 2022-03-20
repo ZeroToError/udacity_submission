@@ -1,0 +1,15 @@
+# Describe GuardDuty findings that were detected related to the brute force attack
+1. UnauthorizedAccess:EC2/SSHBruteForce -> High: the source instance
+2. UnauthorizedAccess:EC2/SSHBruteForce -> Low: the target instance
+
+
+
+# Research the AWS Guard Duty documentation page and explain how GuardDuty may have detected this attack - i.e. what was its source of information.
+
+Amazon GuardDuty is a continuous security monitoring service that analyzes and processes the following Data sources: 
+VPC Flow Logs, AWS CloudTrail management event logs, CloudTrail S3 data event logs, EKS audit logs, and DNS logs. 
+
+In this case the source of BruteForce attack may come from VPC Flow Logs
+
+GuardDuty analyzes the VPC Flow Logs data. It consumes VPC Flow Log events directly from the VPC Flow Logs feature through an independent and duplicative stream of flow logs. 
+It then detects the abnormal IP traffic going to and from network interfaces within the environment.

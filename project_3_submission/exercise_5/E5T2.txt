@@ -1,0 +1,61 @@
+# Identify tools that will allow you to do the following:
+
+## Scan infrastructure as code templates
+###CloudFormation
+Cfripper
+Cloudsploit
+cfn-lint
+
+###Terraform
+Chef inspec
+Open policy agent / Regula
+Terrascan
+
+
+### Example vulnerability
+1. Network Exposures
+2. Vulnerabilities -> use credential data in the code
+3. Unauthorized Privilege Escalations -> forgot to move back to non-root user.
+
+
+##Scan AMI’s or containers for OS vulnerabilities
+AWS Inspector
+
+Open source tools include:
+Clair
+Anchore
+Trivy
+
+Commercial products include:
+aquasec,
+sysdig
+twistlock
+etc.
+
+### Example vulnerability
+1. Allowing SSH password login
+2. Vulnerabilities to Django libraries
+3. Common vulnerabilities and exposures or CVE findings
+
+
+
+##Scan an AWS environment for cloud configuration vulnerabilities
+AWS Config
+AWS Security Hub
+
+
+Prowler
+Scout2
+Cloudsploit
+CloudCustodian
+
+Fugue
+Palo Alto Prisma Cloud
+CloudConformity
+CheckPoint CloudGuard Dome9
+
+
+### Example vulnerability
+1. An IAM role assigned a policy that allows admin access.
+2. Disk storage has been provisioned without volume encryption enabled.
+3. A server instance has been created and configured to allow RDP connections from the public internet.

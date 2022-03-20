@@ -1,0 +1,11 @@
+Based on the architecture diagram, and the steps you have taken so far to upload data and access the application web service, identify at least 2 obvious poor practices as it relates to security.  Include justification.
+
+# Poor practice 1
+The SecurityGroup does not configured properly
+Port 22 is open to all IPs, makes the system vulnerable to bruteforce attack.
+
+
+# Poor practice 2
+The S3 buckets should
+	- Enable versioning
+	- Use VPC Endpoints -> This allows to block requests that do not originate from trusted VPC network

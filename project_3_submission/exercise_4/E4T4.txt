@@ -1,0 +1,17 @@
+
+# What additional architectural change can be made to reduce the internet facing attack surface of the web application instance.
+Use AWS Shield and AWS WAF
+
+
+# Assuming the IAM permissions for the S3 bucket are still insecure, would creating VPC private endpoints for S3 prevent the unauthorized access to the secrets bucket.
+Yes, absolutely. You can create VPC private Endpoint in VPC and create S3 bucket Policy to give the endpoint access permission.
+By doing this, the instances outside the VPC cannot connect to bucket.
+
+
+# Will applying default encryption setting to the s3 buckets encrypt the data that already exists?
+No, applying default encryption does not effect existing objects.
+
+# What would happen if the original cloud formation templates are applied to this environment.
+Sorry, I dont think I really understand the question. Are you asking about overriding the CF stack?
+If you create a change set for an existing stack, CloudFormation compares the stack's information with the information that you submit in the change set and lists the differences. 
+Use change sets to understand which resources CloudFormation will create or change, and how it will change resources in an existing stack, before you create or update a stack.
